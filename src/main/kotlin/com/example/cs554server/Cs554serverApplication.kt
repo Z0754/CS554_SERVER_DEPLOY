@@ -22,19 +22,19 @@ class LayoutTest01Resource {
 	@GetMapping(value = ["/LayoutTest01"])
 	fun sampleLayout(): Layout {
 		var layout = Layout(1, listOf(
-			Component("4", "This is a text field", ""),
-			Component("1", "This is a button", "nil"),
-			Component("2", "This is a list", ""),
-			Component("3", "This is a aa", ""),
-			Component("3", "This is a ddd", ""),
-			Component("4", "This is a fff", ""),
-			Component("1", "This is a rrr", ""),
-			Component("2", "This is a eee", ""),
-			Component("4", "This is a yyyy", ""),
-			Component("3", "This is a hhh", ""),
-			Component("4", "This is a bvvv", ""),
-			Component("1", "This is a 222", ""),
-			Component("3", "This is a lisee2e2t", ""),
+			Component("textField", "This is a text field", ""),
+			Component("button", "This is a button", "nil"),
+			Component("list", "This is a list", ""),
+			Component("button", "This is a aa", ""),
+			Component("textField", "This is a ddd", ""),
+			Component("button", "This is a fff", ""),
+			Component("list", "This is a rrr", ""),
+			Component("button", "This is a eee", ""),
+			Component("button", "This is a yyyy", ""),
+			Component("list", "This is a hhh", ""),
+			Component("textField", "This is a bvvv", ""),
+			Component("textField", "This is a 222", ""),
+			Component("list", "This is a lisee2e2t", ""),
 
 
 
