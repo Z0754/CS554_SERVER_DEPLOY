@@ -22,15 +22,28 @@ class LayoutTest01Resource {
 	@GetMapping(value = ["/LayoutTest01"])
 	fun sampleLayout(): Layout {
 		var layout = Layout(1, listOf(
-			Component(4, "This is a text field", ""),
-			Component(1, "This is a button", "nil"),
-			Component(2, "This is a list", ""),
-		))
+			Component("4", "This is a text field", ""),
+			Component("1", "This is a button", "nil"),
+			Component("2", "This is a list", ""),
+			Component("3", "This is a aa", ""),
+			Component("3", "This is a ddd", ""),
+			Component("4", "This is a fff", ""),
+			Component("1", "This is a rrr", ""),
+			Component("2", "This is a eee", ""),
+			Component("4", "This is a yyyy", ""),
+			Component("3", "This is a hhh", ""),
+			Component("4", "This is a bvvv", ""),
+			Component("1", "This is a 222", ""),
+			Component("3", "This is a lisee2e2t", ""),
+
+
+
+			))
 		return layout
 	}
 
 	data class Message(val id: String?, val text: String)
-	data class Component(val variant: Int, val data: String?, val action: String?)
+	data class Component(val variant: String, val data: String?, val action: String?)
 	data class Layout(val pageID: Int, val components: List<Component>)
 
 
