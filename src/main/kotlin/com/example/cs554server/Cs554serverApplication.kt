@@ -56,22 +56,22 @@ class LayoutTest02Resource {
 	@GetMapping(value = ["/LayoutTest02"])
 	fun sampleLayout(): String {
 		var hard = "{\n" +
-				"    \"pageID\": \"1\",\n" +
+				"    \"pageID\": \"123\",\n" +
 				"    \"expiry\": \"6000\",\n" +
 				"    \"components\": [\n" +
 				"        {\n" +
-				"            \"id\":\"???\",\n" +
+				"            \"id\":\"689\",\n" +
 				"            \"variant\": \"label\",\n" +
 				"            \"expiry\": \"6000\",\n" +
 				"            \"itemDataModel\":\n" +
 				"            {\n" +
 				"                \"text\": \"label\",\n" +
-				"                \"color\": \"green\",\n" +
+				"                \"color\": \"green\"\n" +
 				"\n" +
 				"            }\n" +
 				"        },\n" +
 				"        {\n" +
-				"            \"id\":\"???\",\n" +
+				"            \"id\":\"231\",\n" +
 				"            \"variant\": \"button\",\n" +
 				"            \"expiry\": \"6000\",\n" +
 				"            \"itemDataModel\":\n" +
