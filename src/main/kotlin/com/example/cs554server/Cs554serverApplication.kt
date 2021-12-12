@@ -23,8 +23,12 @@ class LayoutTest01Resource {
 	fun sampleLayout(): Layout {
 		var layout = Layout("1", "6000", listOf(
 			Component("3265", "label", "6000",
-				ItemDataModel("this islabel","red","","","","",
+				ItemDataModel("this is a label","red","","","","",
 					listOf("payload1","payload2"))
+			),
+			Component("5165", "label", "6000",
+				ItemDataModel("this is another label","green","","","","",
+					listOf())
 			),
 			Component("4765", "button", "6000",
 				ItemDataModel("tap me","red","","","","1",
