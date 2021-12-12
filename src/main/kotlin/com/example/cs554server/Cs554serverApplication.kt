@@ -23,11 +23,12 @@ class LayoutTest01Resource {
 	fun sampleLayout(): Layout {
 		var layout = Layout("1", "6000", listOf(
 			Component("3265", "label", "6000",
-				ItemDataModel("this islabel","green","","","","","")
+				ItemDataModel("this islabel","red","","","","",
+					listOf("payload1","payload2"))
 			),
 			Component("4765", "button", "6000",
-				ItemDataModel("tap me","red","","","","1",""))
-
+				ItemDataModel("tap me","red","","","","1",
+					listOf("payload1","payload2")))
 			))
 		return layout
 	}
@@ -36,7 +37,7 @@ class LayoutTest01Resource {
 	data class Component(val id: String, val variant: String, val expiry: String, val itemDataModel: ItemDataModel)
 	data class Layout(val pageID: String, val expiry: String, val components: List<Component>)
 	data class ItemDataModel(val text: String, val color:String, val itemName: String, val imageURL:String,
-							 val iconKey: String, val action: String, val payload:String)
+							 val iconKey: String, val action: String, val payload: List<String>)
 
 }
 
