@@ -21,29 +21,22 @@ fun main(args: Array<String>) {
 class LayoutTest01Resource {
 	@GetMapping(value = ["/LayoutTest01"])
 	fun sampleLayout(): Layout {
-		var layout = Layout(1, listOf(
-			Component("textField", "This is a text field", ""),
-			Component("button", "This is a button", "nil"),
-			Component("list", "This is a list", ""),
-			Component("button", "This is a aa", ""),
-			Component("textField", "This is a ddd", ""),
-			Component("button", "This is a fff", ""),
-			Component("list", "This is a rrr", ""),
-			Component("button", "This is a eee", ""),
-			Component("button", "This is a yyyy", ""),
-			Component("list", "This is a hhh", ""),
-			Component("textField", "This is a bvvv", ""),
-			Component("textField", "This is a 222", ""),
-			Component("list", "This is a lisee2e2t", ""),
+		var layout = Layout("1", "6000", listOf(
+			Component("3265", "label", "6000",
+				ItemDataModel("this islabel","green","","","","","")
+			),
+			Component("4765", "button", "6000",
+				ItemDataModel("tap me","red","","","","1",""))
 
 			))
 		return layout
 	}
 
 
-	data class Component(val variant: String, val data: String?, val action: String?)
-	data class Layout(val pageID: Int, val components: List<Component>)
-
+	data class Component(val id: String, val variant: String, val expiry: String, val itemDataModel: ItemDataModel)
+	data class Layout(val pageID: String, val expiry: String, val components: List<Component>)
+	data class ItemDataModel(val text: String, val color:String, val itemName: String, val imageURL:String,
+							 val iconKey: String, val action: String, val payload:String)
 
 }
 
