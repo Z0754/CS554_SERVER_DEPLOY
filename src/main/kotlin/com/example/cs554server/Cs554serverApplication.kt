@@ -36,18 +36,60 @@ class LayoutTest01Resource {
 			Component("textField", "This is a 222", ""),
 			Component("list", "This is a lisee2e2t", ""),
 
-
-
 			))
 		return layout
 	}
 
-	data class Message(val id: String?, val text: String)
-	data class Component(val variant: String, val data: String?, val action: String?)
+
+	data class Component(val id : String, val variant: String, val itemDataModel: String)
 	data class Layout(val pageID: Int, val components: List<Component>)
 
 
 }
+
+
+
+data class Button(val id : String, val variant: String, val itemDataModel: String )
+
+@RestController
+class LayoutTest02Resource {
+	@GetMapping(value = ["/LayoutTest02"])
+	fun sampleLayout(): String {
+		var hard = "{\n" +
+				"    \"pageID\": \"1\",\n" +
+				"    \"expiry\": \"6000\",\n" +
+				"    \"components\": [\n" +
+				"        {\n" +
+				"            \"id\":\"???\",\n" +
+				"            \"variant\": \"label\",\n" +
+				"            \"expiry\": \"6000\",\n" +
+				"            \"itemDataModel\":\n" +
+				"            {\n" +
+				"                \"text\": \"label\",\n" +
+				"                \"color\": \"green\",\n" +
+				"\n" +
+				"            }\n" +
+				"        },\n" +
+				"        {\n" +
+				"            \"id\":\"???\",\n" +
+				"            \"variant\": \"button\",\n" +
+				"            \"expiry\": \"6000\",\n" +
+				"            \"itemDataModel\":\n" +
+				"            {\n" +
+				"                \"text\": \"tap me\",\n" +
+				"                \"color\": \"green\",\n" +
+				"                \"action\": \"1\"\n" +
+				"\n" +
+				"            }\n" +
+				"        }\n" +
+				"    ]\n" +
+				"    \n" +
+				"}"
+
+		return hard
+	}
+}
+
 
 @RestController
 class EchoPayloadResource {
