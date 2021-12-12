@@ -41,7 +41,7 @@ class LayoutTest01Resource {
 	}
 
 
-	data class Component(val id : String, val variant: String, val itemDataModel: String)
+	data class Component(val variant: String, val data: String?, val action: String?)
 	data class Layout(val pageID: Int, val components: List<Component>)
 
 
