@@ -32,8 +32,19 @@ class LayoutTest01Resource {
 			),
 			Component("4765", "button", "6000",
 				ItemDataModel("tap me","red","","","","1",
-					listOf("payload1","payload2")))
-			))
+					listOf("payload1","payload2"))
+			),
+			Component("1239", "list", "6000",
+				ItemDataModel("","red","","","","",
+					listOf("item1","item2"))
+			),
+			Component("6645", "icon", "6000",
+				ItemDataModel("sun rise","","","","sunrise","",
+					listOf())
+			)
+		))
+
+
 		return layout
 	}
 
