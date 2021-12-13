@@ -34,6 +34,10 @@ class LayoutTest01Resource {
 				ItemDataModel("tap me","red","","","","action1",
 					listOf("payload1","payload2"))
 			),
+			Component("4327", "button", "6000",
+				ItemDataModel("tap me","blue","","","","action2",
+					listOf("payload1","payload2"))
+			),
 			Component("1239", "list", "6000",
 				ItemDataModel("","red","","","","",
 					listOf("item1","item2"))
