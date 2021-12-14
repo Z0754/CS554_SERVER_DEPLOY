@@ -133,7 +133,7 @@ class LayoutUpload {
 	fun echo(@RequestBody payload: String): String{
 		layouts_json.add(payload)
 		var mappingEndpoint: String = "/LayoutResourse/"+ layouts_json.lastIndex
-		json_dict.put(mappingEndpoint, payload)
+		json_dict.put(""+layouts_json.lastIndex, payload)
 		return mappingEndpoint
 	}
 }
