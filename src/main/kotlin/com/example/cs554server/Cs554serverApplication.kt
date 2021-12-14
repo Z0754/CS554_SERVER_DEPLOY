@@ -95,7 +95,7 @@ class LayoutTest01Resource {
 
 @RestController
 class LayoutTest03Resource {
-	@GetMapping(value = ["/LayoutTest03"])
+	@PostMapping(value = ["/LayoutTest03"])
 	fun sampleLayout(): Layout {
 		return page03
 	}
